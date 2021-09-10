@@ -3,7 +3,7 @@ possible_actions = ["rock", "paper", "scissors"]
 computer_action = random.choice(possible_actions)
 computer=0;player=0;winner=[]
 a={}
-for i in range(1,10):
+for i in range(1,11):
     player_action = input("Enter a choice (rock, paper, scissors): ")
     possible_actions = ["rock", "paper", "scissors"]
     computer_action = random.choice(possible_actions)
@@ -37,6 +37,6 @@ print("Choice history:",a.items())
 print(f'Consolidated Score of player = {player} and Consolidated Score of computer = {computer}  ')
 s = int(input('Enter the round for which you need the information: '))
 
-print(winner[s])
+print(winner[s-1])
 
 
