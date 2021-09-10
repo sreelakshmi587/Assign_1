@@ -7,7 +7,7 @@ for i in range(1,11):
     player_action = input("Enter a choice (rock, paper, scissors): ")
     possible_actions = ["rock", "paper", "scissors"]
     computer_action = random.choice(possible_actions)
-    a[f"\n Round{i}"] =  f"\nPlayer choice = {player_action},\ncomputer choice = {computer_action}.\n"
+    a[i] =  [player_action,computer_action]
     if player_action == computer_action:
         winner.append("None")
 
@@ -36,7 +36,8 @@ for i in range(1,11):
 print("Choice history:",a.items())
 print(f'Consolidated Score of player = {player} and Consolidated Score of computer = {computer}  ')
 s = int(input('Enter the round for which you need the information: '))
-
+print("Player Choice: ",a[s][0])
+print("Computer Choice: ",a[s][1])
 print(winner[s-1])
 
 
