@@ -88,7 +88,7 @@ for i in range(interact):
     elif p1.mood()=='bored':
         print(f"{petname} is bored..Teach him or say hi to reduce its boredom")
         brd_opt=input('What do you opt--to teach(t) or greet(g) :')
-        if brd_opt[0].lower =='t':
+        if brd_opt[0].lower() =='t':
             rlx_word=input('Enter a new word to teach : ')
             p1.sounds[:].append(rlx_word)
             p1.teach(rlx_word)
