@@ -80,4 +80,5 @@ salary=int(input("Enter the salary to find the doctor: "))
 print(dr_list(speciality,salary))
 hsptl_id=int(input('Enter the hospital id to access details: '))
 print(dr_detail(hsptl_id))
-
+con.commit()
+con.close()
