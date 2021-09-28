@@ -99,7 +99,6 @@ dep_id=int(input('Enter the Department_id (1213-1217) to access employee details
 cur.execute(f"SELECT * FROM Employee INNER JOIN Departments where Employee.Department_id='{dep_id}' and Departments.Department_id=Employee.Department_id")
 d=cur.fetchall()
 for i in d:
-    print('\nThe details are as follows...')
     print(f"'\nThe details are as follows...'\nName:{i[0]}\nID:{i[1]}\nSalary:{i[2]}\nDepartment_id:{i[3]}\nCity:{i[4]}\nDepartment:{i[5]} ")
 con.commit()
 con.close()
