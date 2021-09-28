@@ -43,10 +43,10 @@ print('\n'.join([f"{Name:<20}{ID:<20}{Salary:<20}"]+format))
 con.commit()
 print('\n','Identifying Employees with their first letter...')
 letter= input('Enter the character to find a name that starts with it: ')
-cur.execute(f"SELECT DISTINCT Name,ID,City FROM Employee WHERE Name LIKE '{letter}%'")
+cur.execute(f"SELECT DISTINCT * FROM Employee WHERE Name LIKE '{letter}%'")
 let=cur.fetchall()
 for l in let:
-    print(f"The details of the employee whose name begins with {letter} are as follows:\nName:{l[0]}\nID:{l[1]}\nCity:{l[2]}")
+    print(f"The details of the employee whose name begins with {letter} are as follows:\nName:{l[0]}\nID:{l[1]}\nSalary:{l[2]}\nDepartment_id:{l[3]}\nCity:{l[4]}")
 print('\n','Accessing Employee details with the user given ID')
 id=int(input('Enter the ID to access employee detail: '))
 cur.execute(f"SELECT DISTINCT Name,Salary,Department_id,City FROM Employee WHERE ID={id}")
@@ -103,4 +103,5 @@ for i in d:
     print(f"'\nThe details are as follows...'\nName:{i[0]}\nID:{i[1]}\nSalary:{i[2]}\nDepartment_id:{i[3]}\nCity:{i[4]}\nDepartment:{i[5]} ")
 con.commit()
 con.close()
+
 
