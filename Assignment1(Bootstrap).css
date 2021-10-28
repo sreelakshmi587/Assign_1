@@ -1,0 +1,15 @@
+.navbar-brand{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.table{
+    font-weight: 200;
+    font-size: 1rem;
+}
+.nav{
+    /* background-color:#e8e8e4; */
+    background-color:#e9ecef;
+}
+.col-md-2{
+    background-color:#e9ecef ;
+}
